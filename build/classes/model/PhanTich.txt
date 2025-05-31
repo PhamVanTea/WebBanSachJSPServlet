@@ -45,7 +45,7 @@
 	+	Số tiền đã tt
 	+	Số tiền còn thiếu
 	+	Ngày đặt
-	+	Ngày giao
+	+	Ngày giao 
 	
 -	Chi tiết đơn hàng: ok
 	+	Mã CT đơn hàng

@@ -1,0 +1,7 @@
+viết DAO
+
+select: lấy tất cả các đối tượng
+selectById: lấy đối tượng theo id
+insert: thêm 1 đối tượng
+delete: xóa 1 đối tượng
+update: cập nhật 1 đối tượng

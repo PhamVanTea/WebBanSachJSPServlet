@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Date;
+import java.util.Objects;
 
 public class TacGia {
 	private String maTacGia;
@@ -51,6 +52,29 @@ public class TacGia {
 
 	public void setTieuSu(String tieuSu) {
 		this.tieuSu = tieuSu;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(hoVaTen, maTacGia, ngaySinh, tieuSu);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TacGia other = (TacGia) obj;
+		return Objects.equals(maTacGia, other.maTacGia);
+	}
+
+	@Override
+	public String toString() {
+		return "TacGia [maTacGia=" + maTacGia + ", hoVaTen=" + hoVaTen + ", ngaySinh=" + ngaySinh + ", tieuSu=" + tieuSu
+				+ "]";
 	}
 	
 	
