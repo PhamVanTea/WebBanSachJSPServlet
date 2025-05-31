@@ -1,0 +1,59 @@
+-	Sản phẩm:ok
+	+	Tên sách
+	+	Tác giả
+	+	Năm XB
+	+	Giá nhập
+	+	Giá gốc
+	+	Giá bán
+	+	Số lượng
+	+	Thể loại
+	+	Ngôn ngữ
+	+	Mô tả
+	
+-	Tác giả:ok
+	+	Họ và tên
+	+	Ngày sinh
+	+	Tiểu sử
+
+-	Thể loại:ok
+	+	Mã thể loại
+	+	Tên thể loại
+
+-	Khách hàng:ok
+	+	Mã khách hàng
+	+	Tên đăng nhập
+	+	Mật khẩu
+	+	Họ và tên
+	+	Giới tính
+	+	Địa chỉ 
+	+	Địa chỉ nhận hàng
+	+	Địa chỉ mua hàng
+	+	Ngày sinh
+	+	Số điện thoại
+	+	Email
+	+	Đăng kí nhận bảng tin email
+
+-	Đơn hàng:
+	+	Mã đơn hàng
+	+	Khách hàng
+	+	Địa chỉ hóa đơn
+	+	Địa chỉ người mua
+	+	Địa chỉ nhận hàng
+	+	Trạng thái: mới tạo, đang xử lý, đang giao, đã giao, trả hàng
+	+	Hình thức thanh toán / COD
+	+	Trạng thái thanh toán
+	+	Số tiền đã tt
+	+	Số tiền còn thiếu
+	+	Ngày đặt
+	+	Ngày giao
+	
+-	Chi tiết đơn hàng
+	+	Mã CT đơn hàng
+	+	Đơn hàng
+	+	Mã sách 
+	+	Số lượng
+	+	Giá bìa
+	+	Giảm giá
+	+	Giá bán
+	+	Thuê VAT
+	+	Tổng thành tiền
