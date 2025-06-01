@@ -142,7 +142,7 @@ public class TacGiaDAO implements DAOInterface<TacGia> {
 	}
 	
 	public static void main(String[] args) { //kiểm tra dữ liệu có kết nối vs sql chưa 
-		TacGiaDAO tgd = new TacGiaDAO();
+//		TacGiaDAO tgd = new TacGiaDAO();
 //		ArrayList<TacGia> kq = tgd.selectALL();
 //		for (TacGia tacGia : kq) {
 //			System.out.println(tacGia.toString());
