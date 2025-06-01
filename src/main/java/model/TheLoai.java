@@ -27,6 +27,11 @@ public class TheLoai {
 	public void setTenTheLoai(String tenTheLoai) {
 		this.tenTheLoai = tenTheLoai;
 	}
+
+	@Override
+	public String toString() {
+		return "TheLoai [maTheLoai=" + maTheLoai + ", tenTheLoai=" + tenTheLoai + "]";
+	}
 	
 	
 }

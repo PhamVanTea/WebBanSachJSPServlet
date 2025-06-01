@@ -118,6 +118,13 @@ public class SanPham {
 	public void setMoTa(String moTa) {
 		this.moTa = moTa;
 	}
+
+	@Override
+	public String toString() {
+		return "SanPham [maSanPham=" + maSanPham + ", tenSanPham=" + tenSanPham + ", tacGia=" + tacGia + ", namXuatBan="
+				+ namXuatBan + ", giaNhap=" + giaNhap + ", giaBan=" + giaBan + ", giaGoc=" + giaGoc + ", soLuong="
+				+ soLuong + ", theLoai=" + theLoai + ", ngonNgu=" + ngonNgu + ", moTa=" + moTa + "]";
+	}
 	
 	
 	

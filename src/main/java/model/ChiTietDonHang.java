@@ -98,6 +98,13 @@ public class ChiTietDonHang {
 	public void setTongTien(double tongTien) {
 		this.tongTien = tongTien;
 	}
+
+	@Override
+	public String toString() {
+		return "ChiTietDonHang [maChiTietDonHang=" + maChiTietDonHang + ", donHang=" + donHang + ", sanPham=" + sanPham
+				+ ", soLuong=" + soLuong + ", giaGoc=" + giaGoc + ", giamGia=" + giamGia + ", giaBan=" + giaBan
+				+ ", thueVAT=" + thueVAT + ", tongTien=" + tongTien + "]";
+	}
 	
 	
 }

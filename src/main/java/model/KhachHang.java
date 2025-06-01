@@ -132,6 +132,14 @@ public class KhachHang {
 	public void setDangKyNhanBangTin(boolean dangKyNhanBangTin) {
 		this.dangKyNhanBangTin = dangKyNhanBangTin;
 	}
+
+	@Override
+	public String toString() {
+		return "KhachHang [maKhachHang=" + maKhachHang + ", tenDangNhap=" + tenDangNhap + ", matKhau=" + matKhau
+				+ ", hoVaTen=" + hoVaTen + ", gioiTinh=" + gioiTinh + ", diaChi=" + diaChi + ", diaChiNhanHang="
+				+ diaChiNhanHang + ", diaChiMuaHang=" + diaChiMuaHang + ", ngaySinh=" + ngaySinh + ", soDienThoai="
+				+ soDienThoai + ", email=" + email + ", dangKyNhanBangTin=" + dangKyNhanBangTin + "]";
+	}
 	
 	
 	
