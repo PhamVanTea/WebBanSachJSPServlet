@@ -189,6 +189,7 @@
 			//selectById
 //			SanPham sp = spd.selectById(new SanPham("SP3", null, null, 0, 0, 0, 0, 0, null, null, null));
 //			System.out.println(sp);
+			
 	//		insert
 //			TacGia tacGia = new TacGia("TG1", "", null, "");
 //			TheLoai theLoai = new TheLoai("CT", "");
