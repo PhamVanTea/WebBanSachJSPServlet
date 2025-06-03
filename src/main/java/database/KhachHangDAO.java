@@ -78,7 +78,40 @@ public class KhachHangDAO implements DAOInterface<KhachHang>{
 		}
 		return ketQua;
 	}
+	
+	public KhachHang selectByUserNameAndPassword(KhachHang t) {
+		KhachHang ketQua = null;
+		try {
+			Connection con = connectDB.getConnection();
+			String sql = "select * from khachHang where tenDangNhap = ? and matKhau = ?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, t.getTenDangNhap());
+			stmt.setString(2, t.getMatKhau());
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				String maKhacHang = rs.getString("makhachhang");
+				String tenDangNhap = rs.getString("tendangnhap");
+				String matKhau = rs.getString("matkhau");
+				String hoVaTen = rs.getString("hoten");
+				String gioiTinh = rs.getString("gioitinh");
+				String diaChi = rs.getString("diachi");
+				String diaChiNhanHang = rs.getString("diachinhanhang");
+				String diaChiMuaHang = rs.getString("diachimuahang");
+				Date ngaySinh = rs.getDate("ngaysinh");
+				String soDienThoai = rs.getString("sodienthoai");
+				String email = rs.getString("email");
+				boolean dangKyNhanBangTin = rs.getBoolean("dangkinhanbangtin");
+				
+				ketQua = new KhachHang(maKhacHang, tenDangNhap, matKhau, hoVaTen, gioiTinh, diaChi, diaChiNhanHang, diaChiMuaHang, ngaySinh, soDienThoai, email, dangKyNhanBangTin);
 
+			}
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return ketQua;
+	}
+	
 
 	@Override
 	public int insert(KhachHang t) {

@@ -1,3 +1,4 @@
+<%@page import="model.KhachHang"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -46,7 +47,25 @@
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Nội dung tìm kiếm" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Tìm</button>
-        <a class="btn btn-primary" style="white-space: nowrap; margin-left: 10px;" href="dangky.jsp">Đăng ký</a>
+        <%
+        	Object obj = session.getAttribute("khachHang");
+        	KhachHang khachHang = null;
+        	if (obj != null) 
+        		khachHang = (KhachHang)obj;
+        	
+        	if (khachHang == null) {
+        		
+        %>
+        <a class="btn btn-primary" style="white-space: nowrap; margin-left: 10px;" href="dangnhap.jsp">Đăng nhập</a>
+      	<%} else {%>
+      		<div class="row text-center" style="margin-left: 0.25em">
+							<div class="row"><b><%=khachHang.getTenDangNhap() %></b></div>
+							<div class="row"><a style="white-space: nowrap;" href="dang-xuat">
+								Đăng xuất
+							</a>
+							</div>
+			</div>
+      	<%} %>
       </form>
     </div>
   </div>
