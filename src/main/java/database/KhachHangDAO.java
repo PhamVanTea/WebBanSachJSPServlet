@@ -179,6 +179,25 @@ public class KhachHangDAO implements DAOInterface<KhachHang>{
 		return ketQua;
 	}
 	
+	public boolean kiemTraTenDangNhap(String tenDangNhap) {
+		boolean ketQua = false;
+		try {
+			Connection con = connectDB.getConnection();
+			String sql = "select * from khachHang where tenDangNhap = ?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, tenDangNhap);
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				ketQua =  true;
+			}
+			connectDB.closeConnection(con);
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return ketQua;
+	}
+	
 	//kiểm tra dữ liệu
 	public static void main(String[] args) {
 		//selectAll

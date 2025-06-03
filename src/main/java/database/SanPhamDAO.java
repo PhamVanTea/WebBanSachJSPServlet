@@ -173,6 +173,7 @@
 			} catch (SQLException e) {
 				// TODO: handle exception
 				e.printStackTrace();
+
 			}
 			return ketQua;
 		}
@@ -181,10 +182,10 @@
 		public static void main(String[] args) {
 	//		selectALL
 			SanPhamDAO spd = new SanPhamDAO();
-	//		ArrayList<SanPham> kq = spd.selectALL();
-	//		for (SanPham sanPham : kq) {
-	//			System.out.println(sanPham.toString());
-	//		}
+			// ArrayList<SanPham> kq = spd.selectALL();
+			// for (SanPham sanPham : kq) {
+			// 	System.out.println(sanPham.toString());
+			// }
 			
 			//selectById
 //			SanPham sp = spd.selectById(new SanPham("SP3", null, null, 0, 0, 0, 0, 0, null, null, null));
