@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.KhachHang;
+import util.MaHoa;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -67,6 +68,8 @@ public class DangKy extends HttpServlet {
 		
 		if (!matKhau.equals(matKhauNhapLai)) {
 			baoLoi += "Mật khẩu không khớp.<br/>";
+		} else {
+			matKhau = MaHoa.toSHA1(matKhau);
 		}
 		request.setAttribute("baoLoi", baoLoi);
 		

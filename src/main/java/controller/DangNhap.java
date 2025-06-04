@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import model.KhachHang;
+import util.MaHoa;
 
 import java.io.IOException;
 
@@ -44,6 +45,7 @@ public class DangNhap extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String tenDangNhap = request.getParameter("tenDangNhap");
 		String matKhau = request.getParameter("matKhau");
+		matKhau = MaHoa.toSHA1(matKhau);
 		
 		KhachHang kh = new KhachHang();
 		kh.setTenDangNhap(tenDangNhap);
