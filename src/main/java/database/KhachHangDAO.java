@@ -231,6 +231,24 @@ public class KhachHangDAO implements DAOInterface<KhachHang>{
 		return ketQua;
 	}
 	
+	public boolean changePassword(KhachHang t) {
+		int ketQua = 0;
+		try {
+			Connection con = connectDB.getConnection();
+			String sql = "UPDATE khachhang " + " SET " + " matkhau=?" + " WHERE makhachhang=?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, t.getMatKhau());
+			stmt.setString(2, t.getMaKhachHang()); // Đặt ID ở cuối
+		 	
+		 	ketQua = stmt.executeUpdate();
+		 	connectDB.closeConnection(con);
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return ketQua > 0;
+	}
+	
 	//kiểm tra dữ liệu
 	public static void main(String[] args) {
 		//selectAll

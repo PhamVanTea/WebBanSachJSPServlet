@@ -46,7 +46,7 @@
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Nội dung tìm kiếm" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Tìm</button>
+        <button class="btn btn-outline-success" type="submit" style="margin-right: 20px;">Tìm</button>
         <%
         	Object obj = session.getAttribute("khachHang");
         	KhachHang khachHang = null;
@@ -56,15 +56,23 @@
         	if (khachHang == null) {
         		
         %>
-        <a class="btn btn-primary" style="white-space: nowrap; margin-left: 10px;" href="dangnhap.jsp">Đăng nhập</a>
+        <a class="btn btn-primary" style="white-space: nowrap; margin-left:;" href="dangnhap.jsp">Đăng nhập</a>
       	<%} else {%>
-      		<div class="row text-center" style="margin-left: 0.25em">
-							<div class="row"><b><%=khachHang.getTenDangNhap() %></b></div>
-							<div class="row"><a style="white-space: nowrap;" href="dang-xuat">
-								Đăng xuất
-							</a>
-							</div>
-			</div>
+      		<ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-infor">
+    <li class="nav-item dropdown dropstart">
+        <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: ;">
+            Tài khoản
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Đơn hàng của tôi</a></li>
+            <li><a class="dropdown-item" href="#">Thông báo</a></li>
+            <li><a class="dropdown-item" href="#">Thay đổi thông tin</a></li>
+            <li><a class="dropdown-item" href="doimatkhau.jsp">Đổi mật khẩu</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="dang-xuat">Thoát tài khoản</a></li>
+        </ul>
+    </li>
+</ul>	
       	<%} %>
       </form>
     </div>
