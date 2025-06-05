@@ -65,7 +65,8 @@
 		<div class="error" id="baoLoi">
 			<%=baoLoi %>
 		</div>
-			<form action="dang-ky" method="post">
+			<form action="../khach-hang" method="post">
+			<input type="hidden" name="hanhDong" value="dang-ky"/>
 				<div class="row">
 					<div class="col-md-6">
 					<h3>Tài khoản</h3>

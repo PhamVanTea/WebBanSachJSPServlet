@@ -26,6 +26,6 @@
 	</style>
 </head>
 <body>
-	<h1>Đăng ký thành công ! Quay lại trang đăng nhập</h1>
+	<h1>Thao tác thành công !</h1>
 </body>
 </html>

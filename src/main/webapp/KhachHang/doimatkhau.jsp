@@ -31,7 +31,8 @@
 	%>
 	<div class="container">
 	<h1>ĐỔI MẬT KHẨU</h1>
-		<form action="doi-mat-khau" method="post">
+		<form action="../khach-hang" method="post">
+		<input type="hidden" name="hanhDong" value="doi-mat-khau"/>
 		  <div class="mb-3">
 		    <label for="matKhauHienTai" class="form-label">Mật khẩu hiện tại</label>
 		    <input type="password" class="form-control" id="matKhauHienTai" name="matKhauHienTai">

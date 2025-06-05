@@ -12,11 +12,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+	<%
+		// Lấy context path để sử dụng cho các đường dẫn tuyệt đối
+		String contextPath = request.getContextPath();
+	%>
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+      <img src="<%= contextPath %>/img/logo/Bootstrap_logo.svg" alt="Bootstrap" width="30" height="24">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -56,7 +60,7 @@
         	if (khachHang == null) {
         		
         %>
-        <a class="btn btn-primary" style="white-space: nowrap; margin-left:;" href="dangnhap.jsp">Đăng nhập</a>
+        <a class="btn btn-primary" style="white-space: nowrap;" href="<%= contextPath %>/KhachHang/dangnhap.jsp">Đăng nhập</a>
       	<%} else {%>
       		<ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-infor">
     <li class="nav-item dropdown dropstart">
@@ -66,10 +70,10 @@
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Đơn hàng của tôi</a></li>
             <li><a class="dropdown-item" href="#">Thông báo</a></li>
-            <li><a class="dropdown-item" href="thaydoithongtin.jsp">Thay đổi thông tin</a></li>
-            <li><a class="dropdown-item" href="doimatkhau.jsp">Đổi mật khẩu</a></li>
+            <li><a class="dropdown-item" href="<%= contextPath %>/KhachHang/thaydoithongtin.jsp">Thay đổi thông tin</a></li>
+            <li><a class="dropdown-item" href="<%= contextPath %>/KhachHang/doimatkhau.jsp">Đổi mật khẩu</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-danger" href="dang-xuat">Thoát tài khoản</a></li>
+            <li><a class="dropdown-item text-danger" href="<%= contextPath %>/khach-hang?hanhDong=dang-xuat">Thoát tài khoản</a></li>
         </ul>
     </li>
 </ul>	
@@ -104,13 +108,13 @@
 				  </div>
 				  <div class="carousel-inner">
 				    <div class="carousel-item active">
-				      <img src="img/slider/slide1.webp" class="d-block w-100" alt="slide1" style="width: 100%; height: 200px">
+				      <img src="<%= contextPath %>/img/slider/slide1.webp" class="d-block w-100" alt="slide1" style="width: 100%; height: 200px">
 				    </div>
 				    <div class="carousel-item">
-				      <img src="img/slider/slide2.webp" class="d-block w-100" alt="slide2" style="width: 100%; height: 200px">
+				      <img src="<%= contextPath %>/img/slider/slide2.webp" class="d-block w-100" alt="slide2" style="width: 100%; height: 200px">
 				    </div>
 				    <div class="carousel-item">
-				      <img src="img/slider/slide3.webp" class="d-block w-100" alt="slide3" style="width: 100%; height: 200px">
+				      <img src="<%= contextPath %>/img/slider/slide3.webp" class="d-block w-100" alt="slide3" style="width: 100%; height: 200px">
 				    </div>
 				  </div>
 				  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -127,7 +131,7 @@
 				<div class="row">
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card" style="width: 18rem;">
-						  <img src="img/product/product1.webp" class="card-img-top" alt="...">
+						  <img src="<%= contextPath %>/img/product/product1.webp" class="card-img-top" alt="...">
 						  	<div class="card-body">
 						    	<h5 class="card-title">Áo sơ mi sọc caro</h5>
 						    	<p class="card-text">Chất liệu cotton tự nhiên, có khả năng thấm hút mồ hôi và thoáng khí tốt.</p>
@@ -137,7 +141,7 @@
 					</div>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card" style="width: 18rem;">
-						  <img src="img/product/product2.webp" class="card-img-top" alt="..." style="height: 382px">
+						  <img src="<%= contextPath %>/img/product/product2.webp" class="card-img-top" alt="..." style="height: 382px">
 						  	<div class="card-body">
 						    	<h5 class="card-title">Áo sơ mi xanh</h5>
 						    	<p class="card-text">Chất liệu cotton tự nhiên, có khả năng thấm hút mồ hôi và thoáng khí tốt.</p>
@@ -147,37 +151,7 @@
 					</div>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card" style="width: 18rem;">
-						  <img src="img/product/product3.webp" class="card-img-top" alt="...">
-						  	<div class="card-body">
-						    	<h5 class="card-title">Áo sơ mi trắng</h5>
-						    	<p class="card-text">Chất liệu cotton tự nhiên, có khả năng thấm hút mồ hôi và thoáng khí tốt.</p>
-						    	<a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
-						  	</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card" style="width: 18rem;">
-						  <img src="img/product/product1.webp" class="card-img-top" alt="...">
-						  	<div class="card-body">
-						    	<h5 class="card-title">Áo sơ mi sọc caro</h5>
-						    	<p class="card-text">Chất liệu cotton tự nhiên, có khả năng thấm hút mồ hôi và thoáng khí tốt.</p>
-						    	<a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
-						  	</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card" style="width: 18rem;">
- 						  <img src="img/product/product2.webp" class="card-img-top" alt="..." style="height: 382px">
-						  	<div class="card-body">
-						    	<h5 class="card-title">Áo sơ mi xanh</h5>
-						    	<p class="card-text">Chất liệu cotton tự nhiên, có khả năng thấm hút mồ hôi và thoáng khí tốt.</p>
-						    	<a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
-						  	</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card" style="width: 18rem;">
-						  <img src="img/product/product3.webp" class="card-img-top" alt="...">
+						  <img src="<%= contextPath %>/img/product/product3.webp" class="card-img-top" alt="...">
 						  	<div class="card-body">
 						    	<h5 class="card-title">Áo sơ mi trắng</h5>
 						    	<p class="card-text">Chất liệu cotton tự nhiên, có khả năng thấm hút mồ hôi và thoáng khí tốt.</p>

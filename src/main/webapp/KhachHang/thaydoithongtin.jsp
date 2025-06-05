@@ -72,7 +72,8 @@
 		<div class="error" id="baoLoi">
 			<%=baoLoi %>
 		</div>
-			<form action="thay-doi-thong-tin" method="post">
+			<form action="../khach-hang" method="post">
+			<input type="hidden" name="hanhDong" value="thay-doi-thong-tin"/>
 				<div class="row">
 					<div class="col-md-6">
 					

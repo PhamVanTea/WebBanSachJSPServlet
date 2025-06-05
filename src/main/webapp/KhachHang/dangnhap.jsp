@@ -32,8 +32,9 @@
 </head>
 <body>
 	<main class="form-signin w-100 m-auto">
-		<form class="text-center" action="dang-nhap" method="POST">
-			<img class="mb-4" src="img/logo/Bootstrap_logo.webp"
+		<form class="text-center" action="../khach-hang" method="POST">
+			<input type="hidden" name="hanhDong" value="dang-nhap"/>
+			<img class="mb-4" src="../img/logo/Bootstrap_logo.webp"
 				alt="logo" width="72">
 			<%
 				String baoLoi = request.getAttribute("baoLoi")+"";
