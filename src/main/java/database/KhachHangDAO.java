@@ -249,6 +249,34 @@ public class KhachHangDAO implements DAOInterface<KhachHang>{
 		return ketQua > 0;
 	}
 	
+	public int updateInfo(KhachHang t) {
+		int ketQua = 0;
+		try {
+			Connection con = connectDB.getConnection();
+			String sql = "UPDATE khachhang " + " SET " + " hoten=?" + ", gioitinh=?"
+					+ ", diachi=?" + ", diachinhanhang=?" + ", diachimuahang=?" + ", ngaysinh=?" + ", sodienthoai=?"
+					+ ", email=?" + ", dangkinhanbangtin=?" + " WHERE makhachhang=?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, t.getHoVaTen());
+			stmt.setString(2, t.getGioiTinh());
+			stmt.setString(3, t.getDiaChi());
+			stmt.setString(4, t.getDiaChiNhanHang());
+			stmt.setString(5, t.getDiaChiMuaHang());
+			stmt.setDate(6, t.getNgaySinh());
+			stmt.setString(7, t.getSoDienThoai());
+			stmt.setString(8, t.getEmail());
+			stmt.setBoolean(9, t.isDangKyNhanBangTin());
+			stmt.setString(10, t.getMaKhachHang()); // Đặt ID ở cuối
+		 	
+		 	ketQua = stmt.executeUpdate();
+		 	connectDB.closeConnection(con);
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return ketQua;
+	}
+	
 	//kiểm tra dữ liệu
 	public static void main(String[] args) {
 		//selectAll
